@@ -7,6 +7,7 @@ public class ScenesController : MonoBehaviour
 {
     // Animations
     private const string LOAD_VIEW_ANIMATION = "Load";
+    private const string LOAD_ALT_VIEW_ANIMATION = "LoadAlt";
     private const string LOADED_VIEW_ANIMATION = "Loaded";
 
     private Animator _animator;
@@ -26,7 +27,7 @@ public class ScenesController : MonoBehaviour
     public void LoadGameScene()
     {
         _nextSceneToLoad = Constants.GAME_SCENE;
-        _animator.Play(LOAD_VIEW_ANIMATION, -1, 0);
+        _animator.Play(LOAD_ALT_VIEW_ANIMATION, -1, 0);
     }
 
     public void LoadMenuScene()
