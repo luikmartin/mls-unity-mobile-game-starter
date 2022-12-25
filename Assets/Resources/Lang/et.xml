@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language code="et">
+	<!-- Menu Scene BEGIN -->
+	<!-- Menu View -->
+	<text key="menuScene.menuView.play">Mängima</text>
+	<text key="menuScene.menuView.stats">Statis-\ntika</text>
+	<!-- Stats View -->
+	<text key="menuScene.statsView.title">Statistika</text>
+	<!-- Settings View -->
+	<text key="menuScene.settingsView.title">Sätted</text>
+	<!-- Menu Scene END -->
+	
+	<!-- Game Scene BEGIN-->
+	<!-- Game View -->
+	<text key="gameScene.gameView.score+1">Skoor\n+1</text>
+	<text key="gameScene.gameView.score-1">Skoor\n-1</text>
+	<text key="gameScene.gameView.gameOver">Lõpeta mäng</text>
+	<!-- Paused View -->
+	<text key="gameScene.pausedView.title">Peatatud</text>
+	<text key="gameScene.pausedView.quit">Menüüsse</text>
+	<!-- Game Over View -->
+	<text key="gameScene.gameOverView.title">Mäng läbi!</text>
+	<text key="gameScene.gameOverView.finalScoreTemplate">Mängu skoor: {0}</text>
+	<text key="gameScene.gameOverView.quit">Menüüsse</text>
+	<!-- Game Scene END -->
+</Language>

@@ -7,21 +7,13 @@ public class SafeArea : MonoBehaviour
     private CanvasScaler _canvasScaler;
     private float _bottomUnits, _topUnits;
 
-    private void Awake()
-    {
-        _canvasScaler = GetComponentInParent<CanvasScaler>();
-    }
+    private void Awake() => _canvasScaler = GetComponentInParent<CanvasScaler>();
 
-    private void Start()
-    {
-        ApplyVerticalSafeArea();
-    }
+    private void Start() => ApplyVerticalSafeArea();
+
 #if UNITY_EDITOR
-    // For testing purposes only, foe example if when simulator device changes
-    private void Update()
-    {
-        ApplyVerticalSafeArea();
-    }
+    // For testing purposes only: when in the editor the simulator device is changed
+    private void Update() => ApplyVerticalSafeArea();
 #endif
     private void ApplyVerticalSafeArea()
     {

@@ -6,20 +6,9 @@ public class GameController : MonoBehaviour
 
     private GameUIController _gameUIController;
 
-    private void Awake()
-    {
-        _gameUIController = GameObject.FindObjectOfType<GameUIController>();
-    }
+    private void Awake() => _gameUIController = GameObject.FindObjectOfType<GameUIController>();
 
-    private void Start()
-    {
-        Time.timeScale = 1;
-    }
-
-    private void Update()
-    {
-
-    }
+    private void Start() => Time.timeScale = 1;
 
     public void Pause()
     {
@@ -35,10 +24,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void GameOver()
-    {
-        _gameUIController.OpenGameOverView(Score);
-    }
+    public void GameOver() => _gameUIController.OpenGameOverView(Score);
 
     public void AddToScore(int amount)
     {

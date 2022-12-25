@@ -3,9 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Animator))]
-public class ScenesController : MonoBehaviour
+public class ScenesController : Singleton<ScenesController>
 {
-    // Animations
     private const string LOAD_VIEW_ANIMATION = "Load";
     private const string LOAD_ALT_VIEW_ANIMATION = "LoadAlt";
     private const string LOADED_VIEW_ANIMATION = "Loaded";
@@ -15,7 +14,12 @@ public class ScenesController : MonoBehaviour
     private string _nextSceneToLoad;
 
 
-    private void Awake() => _animator = GetComponent<Animator>();
+    public override void Awake()
+    {
+        base.Awake();
+
+        _animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {

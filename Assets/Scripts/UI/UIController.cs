@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseUIController : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     [SerializeField]
     protected List<GameObject> _views;
