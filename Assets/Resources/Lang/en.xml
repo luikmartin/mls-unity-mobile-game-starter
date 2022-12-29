@@ -6,15 +6,16 @@
 	<text key="menuScene.menuView.stats">Stats</text>
 	<!-- Stats View -->
 	<text key="menuScene.statsView.title">Stats</text>
+	<text key="menuScene.statsView.highScoreTemplate">High score: {0}</text>
 	<!-- Settings View -->
 	<text key="menuScene.settingsView.title">Settings</text>
 	<!-- Menu Scene END -->
-	
+
 	<!-- Game Scene BEGIN-->
 	<!-- Game View -->
 	<text key="gameScene.gameView.score+1">Score\n+1</text>
 	<text key="gameScene.gameView.score-1">Score\n-1</text>
-	<text key="gameScene.gameView.gameOver">Game over</text>
+	<text key="gameScene.gameView.endGame">End game</text>
 	<!-- Paused View -->
 	<text key="gameScene.pausedView.title">Paused</text>
 	<text key="gameScene.pausedView.quit">Quit</text>

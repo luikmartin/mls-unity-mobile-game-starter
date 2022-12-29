@@ -8,7 +8,9 @@ public class GameController : MonoBehaviour
 
     private void Awake() => _gameUIController = GameObject.FindObjectOfType<GameUIController>();
 
-    private void Start() => Time.timeScale = 1;
+    private void Start() => StartGame();
+
+    public void StartGame() => Time.timeScale = 1;
 
     public void Pause()
     {
@@ -24,7 +26,12 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void GameOver() => _gameUIController.OpenGameOverView(Score);
+    public void EndGame()
+    {
+        _gameUIController.OpenGameOverView(Score);
+
+        UpdateStatsAndSave();
+    }
 
     public void AddToScore(int amount)
     {
@@ -42,5 +49,15 @@ public class GameController : MonoBehaviour
             Score = 0;
         }
         _gameUIController.SetScore(Score);
+    }
+
+    private void UpdateStatsAndSave()
+    {
+        var saveFile = Saves.Instance.saveFile;
+        var highestCore = saveFile.highScore;
+
+        saveFile.highScore = highestCore >= Score ? highestCore : Score;
+
+        Saves.Instance.Save();
     }
 }

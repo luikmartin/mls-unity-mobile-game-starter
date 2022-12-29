@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameUIController : UIController
 {
-    private static readonly string FINAL_SCORE_TEMPLATE = "gameScene.gameOverView.finalScoreTemplate";
+    private static readonly string FINAL_SCORE_TEMPLATE_KEY = "gameScene.gameOverView.finalScoreTemplate";
 
     [SerializeField]
     private TextMeshProUGUI _scoreField;
@@ -17,8 +17,7 @@ public class GameUIController : UIController
 
     public void OpenGameOverView(int score)
     {
-        var finalScoreTemplate = Localization.Instance.GetText(FINAL_SCORE_TEMPLATE);
-        _gameOverScoreField.text = string.Format(finalScoreTemplate, score);
+        _gameOverScoreField.text = Localization.Instance.GetText(FINAL_SCORE_TEMPLATE_KEY, score);
 
         SetViewActive(Constants.GAME_OVER_VIEW);
     }

@@ -68,6 +68,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # TextMesh Pro
+/[Aa]ssets/TextMesh Pro.meta
 /[Aa]ssets/TextMesh Pro/*
 
 # Temporary auto-generated Android Assets

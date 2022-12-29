@@ -8,13 +8,14 @@
 	<text key="menuScene.statsView.title">Statistika</text>
 	<!-- Settings View -->
 	<text key="menuScene.settingsView.title">Sätted</text>
+	<text key="menuScene.statsView.highScoreTemplate">Parim skoor: {0}</text>
 	<!-- Menu Scene END -->
-	
+
 	<!-- Game Scene BEGIN-->
 	<!-- Game View -->
 	<text key="gameScene.gameView.score+1">Skoor\n+1</text>
 	<text key="gameScene.gameView.score-1">Skoor\n-1</text>
-	<text key="gameScene.gameView.gameOver">Lõpeta mäng</text>
+	<text key="gameScene.gameView.endGame">Lõpeta mäng</text>
 	<!-- Paused View -->
 	<text key="gameScene.pausedView.title">Peatatud</text>
 	<text key="gameScene.pausedView.quit">Menüüsse</text>

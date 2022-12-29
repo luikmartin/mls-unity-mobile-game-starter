@@ -16,11 +16,12 @@ public class UIButton : Button
 
     private void Update()
     {
-        if (_label != null)
+        if (_label == null)
         {
-            _label.color = currentSelectionState == SelectionState.Pressed
-                ? colors.pressedColor
-                : colors.normalColor;
+            return;
         }
+        _label.color = currentSelectionState == SelectionState.Pressed
+            ? colors.pressedColor
+            : colors.normalColor;
     }
 }
