@@ -76,5 +76,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # User config
-/[Aa]ssets/Config.json.meta
 /[Aa]ssets/Config.json
