@@ -1,5 +1,7 @@
 public static class Constants
 {
+    public const string CONFIG_PATH = "Assets/Config.json";
+
     // Scenes
     public const string MENU_SCENE = "MenuScene";
     public const string GAME_SCENE = "GameScene";
