@@ -1,7 +1,7 @@
 using Unity.Services.Mediation;
 using UnityEngine;
 
-public class Ad : AdBase<IInterstitialAd, IInterstitialAd>
+public class InterstitialAd : AdBase<IInterstitialAd, IInterstitialAd>
 {
     public async void ShowInterstitial()
     {
