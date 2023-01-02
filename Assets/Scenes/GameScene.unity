@@ -1602,27 +1602,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 576677825, guid: 2e6dd3b6226bb405fa49ff1b26a7c364, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e6dd3b6226bb405fa49ff1b26a7c364, type: 3}
---- !u!1 &1756355353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3656216140971811933, guid: 2e6dd3b6226bb405fa49ff1b26a7c364, type: 3}
-  m_PrefabInstance: {fileID: 1756355352}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1756355354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756355353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00e3edb9831540a4b5204f6c7d8aeed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  androidAdUnitId: Banner_Android
-  iosAdUnitId: Banner_iOS
-  bannerAdAnchor: 0
-  bannerSize: 0
 --- !u!1001 &1758449148
 PrefabInstance:
   m_ObjectHideFlags: 0

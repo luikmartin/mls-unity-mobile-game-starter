@@ -3528,24 +3528,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6dd3b6226bb405fa49ff1b26a7c364, type: 3}
---- !u!1 &7751212838086771108 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3656216140971811933, guid: 2e6dd3b6226bb405fa49ff1b26a7c364, type: 3}
-  m_PrefabInstance: {fileID: 7751212838086771107}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7751212838086771115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7751212838086771108}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4691dab14ff457d8a095b232eaa88c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  androidAdUnitId: Banner_Android
-  iosAdUnitId: Banner_iOS
-  bannerAdAnchor: 0
-  bannerSize: 0
