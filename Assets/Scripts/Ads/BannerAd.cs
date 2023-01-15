@@ -35,7 +35,7 @@ public class BannerAd : AdBase<IBannerAd, IBannerAd>
 		LoadAd();
 	}
 
-	public async override void LoadAd()
+	public override async void LoadAd()
 	{
 		try
 		{

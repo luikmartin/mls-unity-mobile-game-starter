@@ -13,7 +13,7 @@ public class Localization : Singleton<Localization>
 	private static readonly string TRANSLATIONS_PATH = "Lang/";
 
 	public Language SelectedLanguage { get; private set; }
-	public List<Language> GetLanguages => new List<Language>() { Language.EN, Language.ET };
+	public List<Language> GetLanguages => new() { Language.EN, Language.ET };
 
 	private List<LocalizationItem> _translations;
 

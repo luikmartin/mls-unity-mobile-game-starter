@@ -27,8 +27,10 @@ public class RewardedAd : AdBase<IRewardedAd, IRewardedAd>
 			try
 			{
 				//Here we provide a user id and custom data for server to server validation.
-				RewardedAdShowOptions showOptions = new RewardedAdShowOptions();
-				showOptions.AutoReload = true;
+				RewardedAdShowOptions showOptions = new RewardedAdShowOptions
+				{
+					AutoReload = true
+				};
 				S2SRedeemData s2SData;
 				s2SData.UserId = "my cool user id";
 				s2SData.CustomData = "{\"reward\":\"Gems\",\"amount\":20}";

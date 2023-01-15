@@ -51,5 +51,9 @@
         "temp/": true,
         "Temp/": true
     },
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.words": [
+        "Behaviour",
+        "Prefs"
+    ]
 }

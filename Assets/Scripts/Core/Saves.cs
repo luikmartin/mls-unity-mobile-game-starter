@@ -17,7 +17,7 @@ public class Saves : Singleton<Saves>
 		Load();
 	}
 
-	public SaveFile Create() => new SaveFile(highScore: 0);
+	public SaveFile Create() => new(highScore: 0);
 
 	public void Save() => PlayerPrefs.SetString(SAVE_KEY, Utils.ToJson(saveFile));
 
