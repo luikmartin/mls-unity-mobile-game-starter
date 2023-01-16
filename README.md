@@ -19,6 +19,7 @@ Created using Unity 2021.3.16f1
 - Save games
 - Advertisements (Interstitial, Reward and Banner for both Android and iOS)
 - Localization (English and Estonian language selection example)
+- Branch and commit naming convention checks
 
 ## Unity packages
 
