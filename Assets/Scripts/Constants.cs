@@ -14,5 +14,5 @@ public static class Constants
 	// Game scene views
 	public const string GAME_VIEW = "GameView";
 	public const string PAUSE_VIEW = "PauseView";
-	public const string GAME_OVER_VIEW = "ameOverView";
+	public const string GAME_OVER_VIEW = "GameOverView";
 }
