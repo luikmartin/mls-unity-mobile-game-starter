@@ -4,22 +4,11 @@
 
 # Mobile game starter for Unity
 
-Created by **Martin Luik**
-
 ## About
 
-A starter project for your new mobile game with basic features implemented.
+A template with useful tools and basic features implemented to kick-start your new mobile game 🚀🚀🚀
 
-Created using Unity 2021.3.16f1
-
-## Features
-
-- Simple and easy to understand project structure
-- Scenes management (Menu and Game Scene as an example)
-- Save games
-- Advertisements (Interstitial, Reward and Banner for both Android and iOS)
-- Localization (English and Estonian language selection example)
-- Branch and commit naming convention checks
+Created by **Martin Luik** 🦢 using Unity 2021.3.16f1
 
 ## Unity packages
 
@@ -28,9 +17,20 @@ Created using Unity 2021.3.16f1
 - Advertisement with Mediation
 - Input System
 - Recorder
+- Test Framework
 - TextMeshPro
 - Unity UI
 - Visual Studio Code Editor
+
+## Features
+
+- Simple and easy to understand project structure
+- Scenes management (Menu and Game Scene)
+- Save games
+- Advertisements (Interstitial, Reward and Banner for both Android and iOS)
+- Localization (English and Estonian language selection)
+- Branch and commit naming convention checks
+- Editor tests (For 'Utils' class)
 
 ## Plugins
 
