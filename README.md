@@ -1,6 +1,6 @@
-[![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=for-the-badge&logo=unity)](https://unity3d.com)
+[![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com) ![Alt text](./Reports/Report/badge_linecoverage.png?raw=true "Line Coverage")
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/martinluik)
+[!["Buy Me A Coffee"](https://img.shields.io/badge/-buy_me_a%C2%A0coffee-gray?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/martinluik)
 
 # Mobile game starter for Unity
 
@@ -31,6 +31,7 @@ Created by **Martin Luik** 🦢 using Unity 2021.3.16f1
 - Localization (English and Estonian language selection)
 - Branch and commit naming convention checks
 - Editor tests (For 'Utils' class)
+- My Unity Editor layout (found in project root)
 
 ## Plugins
 

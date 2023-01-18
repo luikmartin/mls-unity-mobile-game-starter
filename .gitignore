@@ -70,3 +70,9 @@ crashlytics-build.properties
 
 # User config
 /[Aa]ssets/Config.json
+
+# Code Coverage Reports except the latest
+[Rr]eports/History/*
+[Rr]eports/History.meta
+[Rr]eports/mls-unity-mobile-game-starter-openconv/*
+[Rr]eports/mls-unity-mobile-game-starter-openconv.meta
