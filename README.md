@@ -40,3 +40,7 @@ The project was setup with VS Code in mind. Therefore all required files for it'
 ## Setup
 
 // TODO
+
+## Issues
+
+Intellisense does not work in test scripts when using VS Code

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class GameUIController : UIController
+public class GameUIController : UIController, IGameUIController
 {
 	private static readonly string FINAL_SCORE_TEMPLATE_KEY = "gameScene.gameOverView.finalScoreTemplate";
 

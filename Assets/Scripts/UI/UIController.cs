@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIController : MonoBehaviour
+public class UIController : MonoBehaviour, IUIController
 {
 	[SerializeField]
 	protected List<GameObject> _views;
@@ -10,5 +10,5 @@ public class UIController : MonoBehaviour
 
 	protected void Awake() => _scenesController = FindObjectOfType<ScenesController>();
 
-	protected void SetViewActive(string viewName) => _views.ForEach(view => view.SetActive(view.name.Equals(viewName)));
+	public void SetViewActive(string viewName) => _views.ForEach(view => view.SetActive(view.name.Equals(viewName)));
 }

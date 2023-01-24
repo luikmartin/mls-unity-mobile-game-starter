@@ -4,9 +4,9 @@ public class GameController : MonoBehaviour
 {
 	public int Score { get; private set; }
 
-	private GameUIController _gameUIController;
+	public IGameUIController gameUIController { get; set; }
 
-	private void Awake() => _gameUIController = FindObjectOfType<GameUIController>();
+	private void Awake() => gameUIController = FindObjectOfType<GameUIController>();
 
 	private void Start() => StartGame();
 
@@ -14,21 +14,21 @@ public class GameController : MonoBehaviour
 
 	public void Pause()
 	{
-		_gameUIController.OpenPauseView();
+		gameUIController.OpenPauseView();
 
 		Time.timeScale = 0;
 	}
 
 	public void Resume()
 	{
-		_gameUIController.OpenGameView();
+		gameUIController.OpenGameView();
 
 		Time.timeScale = 1;
 	}
 
 	public void EndGame()
 	{
-		_gameUIController.OpenGameOverView(Score);
+		gameUIController.OpenGameOverView(Score);
 
 		UpdateStatsAndSave();
 	}
@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
 	{
 		Score += amount;
 
-		_gameUIController.SetScore(Score);
+		gameUIController.SetScore(Score);
 	}
 
 	public void SubtractFromScore(int amount)
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
 		{
 			Score = 0;
 		}
-		_gameUIController.SetScore(Score);
+		gameUIController.SetScore(Score);
 	}
 
 	private void UpdateStatsAndSave()

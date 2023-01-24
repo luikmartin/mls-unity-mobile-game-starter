@@ -1,8 +1,8 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 1/18/2023 - 9:44:09 PM |
-| Parser: | MultiReportParser (2x OpenCoverParser) |
+| Generated on: | 1/20/2023 - 7:56:40 PM |
+| Parser: | MultiReportParser (3x OpenCoverParser) |
 | Assemblies: | 2 |
 | Classes: | 19 |
 | Files: | 18 |

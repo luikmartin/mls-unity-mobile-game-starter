@@ -76,7 +76,7 @@ PlayerSettings:
   androidFullscreenMode: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -527,7 +527,7 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetNormalMapEncoding: []
   m_BuildTargetDefaultTextureCompressionFormat: []
-  playModeTestRunnerEnabled: 0
+  playModeTestRunnerEnabled: 1
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
   enableInternalProfiler: 0
@@ -872,10 +872,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 4f0f2a3f-3dc7-4e10-a9d1-ae35e79d877e
+  cloudProjectId: 358d094c-04c6-415c-beb8-8849f8b6b4ff
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: mobile-game-starter (1)
+  projectName: mls-mobile-game-starter
   organizationId: mluikgm
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
