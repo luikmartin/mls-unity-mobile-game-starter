@@ -43,4 +43,5 @@ The project was setup with VS Code in mind. Therefore all required files for it'
 
 ## Issues
 
-Intellisense does not work in test scripts when using VS Code
+- Intellisense works ONLY with C# extension (ms-dotnettools.csharp) version v1.25.0
+- Intellisense does not work in test scripts when using VS Code

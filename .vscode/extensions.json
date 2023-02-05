@@ -16,7 +16,14 @@
         "formulahendry.auto-close-tag",
         "formulahendry.auto-rename-tag",
         "gruntfuggly.todo-tree",
-        "ms-vsliveshare.vsliveshare"
+        "ms-vsliveshare.vsliveshare",
+        "fernandoescolar.vscode-solution-explorer",
+        "PTD.vscode-unitymeta",
+        "wayou.vscode-todo-highlight",
+        "Tyriar.sort-lines",
+        "alexdima.copy-relative-path",
+        "Fudge.auto-using",
+        "revrenlove.c-sharp-utilities",
     ],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [

@@ -9,6 +9,12 @@
     <text key="menuScene.statsView.highScoreTemplate">High score: {0}</text>
     <!-- Settings View -->
     <text key="menuScene.settingsView.title">Settings</text>
+    <text key="menuScene.settingsView.languageSelection.label">Language</text>
+    <text key="menuScene.settingsView.resetProfile.label">Reset profile</text>
+    <text key="menuScene.settingsView.resetProfile.button">Reset</text>
+    <text key="menuScene.settingsView.resetProfile.modal.title">Reset profile?</text>
+    <text key="menuScene.settingsView.resetProfile.modal.message">This action cannot be undone. All progress will be lost. Continue?</text>
+    <text key="menuScene.settingsView.resetProfile.modal.confirmButton">Confirm</text>
     <!-- Menu Scene END -->
 
     <!-- Game Scene BEGIN-->

@@ -6,9 +6,16 @@
     <text key="menuScene.menuView.stats">Statis-\ntika</text>
     <!-- Stats View -->
     <text key="menuScene.statsView.title">Statistika</text>
+    <text key="menuScene.statsView.highScoreTemplate">Parim skoor: {0}</text>
     <!-- Settings View -->
     <text key="menuScene.settingsView.title">Sätted</text>
-    <text key="menuScene.statsView.highScoreTemplate">Parim skoor: {0}</text>
+    <text key="menuScene.settingsView.languageSelection.label">Keel</text>
+    <text key="menuScene.settingsView.resetProfile.label">Lähtesta profiil</text>
+    <text key="menuScene.settingsView.resetProfile.button">Lähtesta</text>
+    <text key="menuScene.settingsView.resetProfile.modal.title">Lähtesta profiil?</text>
+    <text key="menuScene.settingsView.resetProfile.modal.message">Antud tegevust ei saa tagasi võtta. Profiili info lähtestatakse. Jätka?</text>
+    <text key="menuScene.settingsView.resetProfile.modal.confirmButton">Kinnita</text>
+    <!-- Menu Scene END -->
     <!-- Menu Scene END -->
 
     <!-- Game Scene BEGIN-->

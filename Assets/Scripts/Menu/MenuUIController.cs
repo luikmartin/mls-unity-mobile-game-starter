@@ -4,10 +4,20 @@ using UnityEngine;
 public class MenuUIController : UIController
 {
 	private static readonly string HIGH_SCORE_TEMPLATE_KEY = "menuScene.statsView.highScoreTemplate";
+	private static readonly string RESET_PROFILE_MODAL_TITLE_KEY = "menuScene.settingsView.resetProfile.modal.title";
+	private static readonly string RESET_PROFILE_MODAL_MESSAGE_KEY = "menuScene.settingsView.resetProfile.modal.message";
+	private static readonly string RESET_PROFILE_MODAL_CONFIRM_BUTTON_KEY = "menuScene.settingsView.resetProfile.modal.confirmButton";
 
 	[SerializeField]
 	private TextMeshProUGUI _highScoreField;
 
+
+	public override void Awake()
+	{
+		base.Awake();
+
+
+	}
 
 	private void Start()
 	{
@@ -24,4 +34,21 @@ public class MenuUIController : UIController
 	public void OpenMenuView() => SetViewActive(Constants.MENU_VIEW);
 
 	public void OnLanguageValueChange(int value) => Localization.Instance.SetLanguage((Language)value);
+
+	public void ResetPlayerProfile()
+	{
+		Modal.Instance.Open(new ModalConfig
+		{
+			title = Localization.Instance.GetText(RESET_PROFILE_MODAL_TITLE_KEY),
+			message = Localization.Instance.GetText(RESET_PROFILE_MODAL_MESSAGE_KEY),
+			confirmButtonLabel = Localization.Instance.GetText(RESET_PROFILE_MODAL_CONFIRM_BUTTON_KEY)
+		});
+	}
+
+	public void ConfirmResetPlayerProfile()
+	{
+		Modal.Instance.Close();
+
+		Saves.Instance.Create();
+	}
 }

@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour, IUIController
 
 	protected ScenesController _scenesController;
 
-	protected void Awake() => _scenesController = FindObjectOfType<ScenesController>();
+	public virtual void Awake() => _scenesController = FindObjectOfType<ScenesController>();
 
 	public void SetViewActive(string viewName) => _views.ForEach(view => view.SetActive(view.name.Equals(viewName)));
 }
