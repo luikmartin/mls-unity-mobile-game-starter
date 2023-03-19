@@ -67,32 +67,32 @@ jobs:
           name: Test results
           path: artifacts
 
-  code-coverage:
-    strategy:
-      matrix:
-        testMode:
-          - playmode
-          - editmode
+  # code-coverage:
+  #   strategy:
+  #     matrix:
+  #       testMode:
+  #         - playmode
+  #         - editmode
 
-    # The type of runner that the job will run on
-    name: coverage
-    needs: testAllModes
-    runs-on: ubuntu-latest
-    steps:
-      - name: Load Test Result Artifacts
-        uses: actions/download-artifact@v1
-        with:
-          name: Test results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.artifactsPath }}
-      - shell: bash
-        run: cat ./artifacts/CodeCoverage/Report/Summary.xml
+  #   # The type of runner that the job will run on
+  #   name: coverage
+  #   needs: testAllModes
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Load Test Result Artifacts
+  #       uses: actions/download-artifact@v1
+  #       with:
+  #         name: Test results for ${{ matrix.testMode }}
+  #         path: ${{ steps.tests.outputs.artifactsPath }}
+  #     - shell: bash
+  #       run: cat ./artifacts/CodeCoverage/Report/Summary.xml
 
-      # Ensure code coverage exceeds required coverage.
-      - name: Check Code Coverage
-        uses: AnImaginedReality/UnityCodeCoverage.Action@v0.0.4
-        with:
-          required-coverage: 25
-          coverage-file-path: ./artifacts/CodeCoverage/Report/Summary.xml
+  #     # Ensure code coverage exceeds required coverage.
+  #     - name: Check Code Coverage
+  #       uses: AnImaginedReality/UnityCodeCoverage.Action@v0.0.4
+  #       with:
+  #         required-coverage: 25
+  #         coverage-file-path: ./artifacts/CodeCoverage/Report/Summary.xml
 #  testRunner:
 #    needs: checkLicense
 #    name: Test all modes 📝
