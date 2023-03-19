@@ -1,8 +1,6 @@
 name: Acquire activation file 🔐
-
 on:
   workflow_dispatch: {}
-
 jobs:
   activation:
     name: Request manual activation file 🔑
