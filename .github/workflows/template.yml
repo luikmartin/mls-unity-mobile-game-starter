@@ -13,6 +13,30 @@ jobs:
       - name: Fail - No license ☠️
         if: ${{ !startsWith(env.UNITY_LICENSE, '<') }}
         run: exit 1
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Unity
+        uses: game-ci/setup-unity@v1
+        with:
+          unity-version: 2021.3.21f1
+
+      - name: Build Unity Project
+        run: |
+          Unity -projectPath ./ -batchmode -executeMethod BuildCommand.PerformBuild -quit
+
+      - name: Run Play Mode Tests
+        run: |
+          Unity -projectPath ./ -runTests -testPlatform playmode -batchmode -quit
+
+      - name: Run Edit Mode Tests
+        run: |
+          Unity -projectPath ./ -runTests -testPlatform editmode -batchmode -quit
+
 #  testRunner:
 #    needs: checkLicense
 #    name: Test all modes 📝
