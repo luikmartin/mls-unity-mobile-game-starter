@@ -4,8 +4,6 @@ on: [push, pull_request]
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  PLAY_MODE: playmode
-  EDIT_MODE: editmode
 
 jobs:
   checkLicense:
@@ -24,8 +22,8 @@ jobs:
       fail-fast: false
       matrix:
         testMode:
-          - ${{ env.PLAY_MODE }}
-          - ${{ env.EDIT_MODE }}
+          - playmode
+          - editmode
 
     steps:
       - uses: actions/checkout@v2
@@ -66,8 +64,8 @@ jobs:
       fail-fast: false
       matrix:
         testMode:
-          - ${{ env.PLAY_MODE }}
-          - ${{ env.EDIT_MODE }}
+          - playmode
+          - editmode
 
     steps:
       - name: Load Test Result Artifacts
