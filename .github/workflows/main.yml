@@ -24,8 +24,8 @@ jobs:
       fail-fast: false
       matrix:
         testMode:
-          - env.PLAY_MODE
-          - env.EDIT_MODE
+          - ${{ env.PLAY_MODE }}
+          - ${{ env.EDIT_MODE }}
 
     steps:
       - uses: actions/checkout@v2
@@ -66,8 +66,8 @@ jobs:
       fail-fast: false
       matrix:
         testMode:
-          - env.PLAY_MODE
-          - env.EDIT_MODE
+          - ${{ env.PLAY_MODE }}
+          - ${{ env.EDIT_MODE }}
 
     steps:
       - name: Load Test Result Artifacts
