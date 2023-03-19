@@ -18,32 +18,24 @@ jobs:
     name: Test in ${{ matrix.testMode }}
     needs: checkLicense
     runs-on: ubuntu-latest
-
     strategy:
       fail-fast: false
       matrix:
         testMode:
           - playmode
           - editmode
-
     steps:
-      - name: Clone Repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           lfs: true
-
-      # Cache unity Library folder from previous builds.
-      - name: Restore Unity Library Folder
-        uses: actions/cache@v2
+      - uses: actions/cache@v2
         with:
           path: ${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}
           restore-keys: |
             Library-
-
-      # Test
-      - name: Run Unity Tests
-        uses: game-ci/unity-test-runner@v2
+      - uses: game-ci/unity-test-runner@v2
+        id: tests
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
@@ -53,46 +45,37 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: ${{ matrix.testMode }} Test Results
           coverageOptions: "generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*"
-
-      - name: Save Test Result Artifacts
-        uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v2
         if: always()
         with:
           name: Test results for ${{ matrix.testMode }}
           path: ${{ steps.tests.outputs.artifactsPath }}
-
-      - name: Save Test Result Artifacts
-        uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
+        if: always()
         with:
-          name: Test results
-          path: artifacts
+          name: Coverage results for ${{ matrix.testMode }}
+          path: ${{ steps.tests.outputs.coveragePath }}
 
   # code-coverage:
-  #   strategy:
-  #     matrix:
-  #       testMode:
-  #         - playmode
-  #         - editmode
+  #     # The type of runner that the job will run on
+  #     name: coverage
+  #     needs: testAllModes
+  #     runs-on: ubuntu-latest
+  #     steps:
+  #       - name: Load Test Result Artifacts
+  #         uses: actions/download-artifact@v1
+  #         with:
+  #             name: Test results
+  #             path: artifacts
+  #       - shell: bash
+  #         run: cat ./artifacts/CodeCoverage/Report/Summary.xml
 
-  #   # The type of runner that the job will run on
-  #   name: coverage
-  #   needs: testAllModes
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Load Test Result Artifacts
-  #       uses: actions/download-artifact@v1
-  #       with:
-  #         name: Test results for ${{ matrix.testMode }}
-  #         path: ${{ steps.tests.outputs.artifactsPath }}
-  #     - shell: bash
-  #       run: cat ./artifacts/CodeCoverage/Report/Summary.xml
-
-  #     # Ensure code coverage exceeds required coverage.
-  #     - name: Check Code Coverage
-  #       uses: AnImaginedReality/UnityCodeCoverage.Action@v0.0.4
-  #       with:
-  #         required-coverage: 25
-  #         coverage-file-path: ./artifacts/CodeCoverage/Report/Summary.xml
+  #       # Ensure code coverage exceeds required coverage.
+  #       - name: Check Code Coverage
+  #         uses: AnImaginedReality/UnityCodeCoverage.Action@v0.0.4
+  #         with:
+  #           required-coverage: 25
+  #           coverage-file-path: ./artifacts/CodeCoverage/Report/Summary.xml
 #  testRunner:
 #    needs: checkLicense
 #    name: Test all modes 📝
