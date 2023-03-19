@@ -4,6 +4,8 @@ on: [push, pull_request]
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  PLAY_MODE: playmode
+  EDIT_MODE: editmode
 
 jobs:
   checkLicense:
@@ -22,8 +24,8 @@ jobs:
       fail-fast: false
       matrix:
         testMode:
-          - playmode
-          - editmode
+          - env.PLAY_MODE
+          - env.EDIT_MODE
 
     steps:
       - uses: actions/checkout@v2
@@ -55,3 +57,31 @@ jobs:
         with:
           name: Test results for ${{ matrix.testMode }}
           path: ${{ steps.tests.outputs.artifactsPath }}
+
+  codeCoverage:
+    # The type of runner that the job will run on
+    needs: testAllModes
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        testMode:
+          - env.PLAY_MODE
+          - env.EDIT_MODE
+
+    steps:
+      - name: Load Test Result Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: Test results for ${{ matrix.testMode }}
+          path: ${{ steps.tests.outputs.artifactsPath }}
+
+      - shell: bash
+        run: cat ./artifacts/CodeCoverage/Report/Summary.xml
+
+      # Ensure code coverage exceeds required coverage.
+      - name: Check Code Coverage
+        uses: AnImaginedReality/UnityCodeCoverage.Action@v0.0.4
+        with:
+          required-coverage: 25
+          coverage-file-path: ./artifacts/CodeCoverage/Report/Summary.xml
