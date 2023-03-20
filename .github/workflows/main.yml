@@ -36,7 +36,7 @@ jobs:
       - name: Restore Unity Library folder
         uses: actions/cache@v2
         with:
-          path: /Library
+          path: ./${{ matrix.projectPath }}/Library
           key: Library-${{ matrix.projectPath }}
           restore-keys: |
             Library-
@@ -45,7 +45,7 @@ jobs:
         uses: game-ci/unity-test-runner@v2
         id: tests
         with:
-          projectPath: ${{ matrix.projectPath }}
+          projectPath: ./${{ matrix.projectPath }}
           testMode: ${{ matrix.testMode }}
           artifactsPath: ${{ matrix.testMode }}-artifacts
           # githubToken: ${{ secrets.GITHUB_TOKEN }}
