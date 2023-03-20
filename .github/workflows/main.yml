@@ -1,4 +1,4 @@
-name: Run play and edit mode tests and generate coverage reports
+name: Tests and coverage
 
 on: [push, pull_request]
 
@@ -21,6 +21,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        projectPath:
+          - mls-unity-mobile-game-starter
         testMode:
           - playmode
           - editmode
