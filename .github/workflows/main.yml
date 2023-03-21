@@ -30,7 +30,6 @@ jobs:
         with:
           lfs: true
 
-      # Cache unity Library folder from previous builds.
       - name: Restore Unity Library folder
         uses: actions/cache@v2
         with:
