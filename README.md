@@ -36,6 +36,7 @@ Created by **Martin Luik** 🦢 using Unity 2021.3.16f1
 - Branch and commit naming convention checks
 - Editor tests (For 'Utils' class)
 - My Unity Editor layout (found in project root)
+- Github actions, triggered by game and edit mode tests on push & pull request
 
 ## Plugins
 
