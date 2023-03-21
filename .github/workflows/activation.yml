@@ -1,18 +1,30 @@
-name: Get Unity license activation file 🔐
+name: Acquire activation file 🔐
 
-on: workflow_dispatch
+on:
+  workflow_dispatch: {}
 
 jobs:
-  requestManualActivationFile:
+  activation:
     name: Request manual activation file 🔑
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        unityVersion:
+          - 2021.3.21f1
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - uses: webbertakken/unity-request-manual-activation-file@v2
+      - name: Request manual activation file
         id: getManualLicenseFile
-
-      - uses: actions/upload-artifact@v2
+        uses: game-ci/unity-request-activation-file@v2
         with:
-          name: Manual Activation File
+          unityVersion: ${{ matrix.unityVersion }}
+
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
           path: ${{ steps.getManualLicenseFile.outputs.filePath }}
