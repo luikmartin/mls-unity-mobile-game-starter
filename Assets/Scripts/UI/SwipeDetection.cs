@@ -41,8 +41,9 @@ public class SwipeDetection : MonoBehaviour
 		_startPosition = position;
 		_startTime = time;
 
-		_trail.SetActive(true);
 		_trail.transform.position = position;
+		// _trail.SetActive(true);
+		StartCoroutine(SetTrailActive());
 
 		_trailCoroutine = StartCoroutine(Trail());
 	}
@@ -101,5 +102,12 @@ public class SwipeDetection : MonoBehaviour
 
 			yield return null;
 		}
+	}
+
+	private IEnumerator SetTrailActive()
+	{
+		yield return new WaitForSeconds(.05f);
+
+		_trail.SetActive(true);
 	}
 }
