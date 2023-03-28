@@ -61,10 +61,10 @@ public abstract class AdBase<AD_TYPE, AD_INTERFACE> : MonoBehaviour where AD_TYP
 		var initializationOptions = new InitializationOptions();
 
 #if UNITY_IOS
-        if (!string.IsNullOrEmpty(_iosGameId))
-        {
-            initializationOptions.SetGameId(_iosGameId);
-        }
+		if (!string.IsNullOrEmpty(_iosGameId))
+		{
+			initializationOptions.SetGameId(_iosGameId);
+		}
 #elif UNITY_ANDROID
 		if (!string.IsNullOrEmpty(_androidGameId))
 		{

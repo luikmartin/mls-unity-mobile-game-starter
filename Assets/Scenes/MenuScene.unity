@@ -5312,7 +5312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3656216140971811933, guid: 2e6dd3b6226bb405fa49ff1b26a7c364, type: 3}
       propertyPath: m_Name
-      value: DontDestroyOnLoad
+      value: Core
       objectReference: {fileID: 0}
     - target: {fileID: 6109475137675741610, guid: 2e6dd3b6226bb405fa49ff1b26a7c364, type: 3}
       propertyPath: m_RootOrder

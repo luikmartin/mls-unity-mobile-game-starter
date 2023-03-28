@@ -11,14 +11,6 @@ public class MenuUIController : UIController
 	[SerializeField]
 	private TextMeshProUGUI _highScoreField;
 
-
-	public override void Awake()
-	{
-		base.Awake();
-
-
-	}
-
 	private void Start()
 	{
 		var highScore = Saves.Instance.saveFile.highScore;

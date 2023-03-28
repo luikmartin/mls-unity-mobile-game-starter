@@ -10,4 +10,10 @@ public static class Utils
 	public static T FromJson<T>(string json) => JsonUtility.FromJson<T>(json);
 
 	public static string ToJson<T>(T obj) => JsonUtility.ToJson(obj, true);
+
+	public static Vector3 ScreenToWorld(Camera camera, Vector3 position)
+	{
+		position.z = camera.nearClipPlane;
+		return camera.ScreenToWorldPoint(position);
+	}
 }
