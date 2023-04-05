@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>1/20/2023 - 7:56:40 PM</Generatedon>
-    <Parser>MultiReportParser (3x OpenCoverParser)</Parser>
-    <Assemblies>2</Assemblies>
-    <Classes>19</Classes>
-    <Files>18</Files>
-    <Coveredlines>34</Coveredlines>
-    <Uncoveredlines>363</Uncoveredlines>
-    <Coverablelines>397</Coverablelines>
-    <Totallines>816</Totallines>
-    <Linecoverage>8.5</Linecoverage>
+    <Generatedon>4/5/2023 - 7:07:50 PM</Generatedon>
+    <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>24</Classes>
+    <Files>21</Files>
+    <Coveredlines>32</Coveredlines>
+    <Uncoveredlines>578</Uncoveredlines>
+    <Coverablelines>610</Coverablelines>
+    <Totallines>1319</Totallines>
+    <Linecoverage>5.2</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
-    <Coveredmethods>9</Coveredmethods>
-    <Totalmethods>97</Totalmethods>
-    <Methodcoverage>9.2</Methodcoverage>
+    <Coveredmethods>12</Coveredmethods>
+    <Totalmethods>156</Totalmethods>
+    <Methodcoverage>7.6</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="Editor" classes="1" coverage="100" coveredlines="20" coverablelines="20" totallines="44" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100">
-      <Class name="UtilsTests" coverage="100" coveredlines="20" coverablelines="20" totallines="44" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
-    </Assembly>
-    <Assembly name="Scripts" classes="18" coverage="3.7" coveredlines="14" coverablelines="377" totallines="808" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="91" methodcoverage="3.2">
+    <Assembly name="Scripts" classes="24" coverage="5.2" coveredlines="32" coverablelines="610" totallines="1588" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="12" totalmethods="156" methodcoverage="7.6">
+      <Class name="AchievementData" coverage="0" coveredlines="0" coverablelines="5" totallines="87" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
       <Class name="AdBase[AD_TYPE,AD_INTERFACE]" coverage="0" coveredlines="0" coverablelines="60" totallines="121" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="10" methodcoverage="0" />
       <Class name="BannerAd" coverage="0" coveredlines="0" coverablelines="27" totallines="50" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
-      <Class name="GameController" coverage="0" coveredlines="0" coverablelines="34" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
+      <Class name="GameController" coverage="42.8" coveredlines="15" coverablelines="35" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="13" methodcoverage="53.8" />
       <Class name="GameUIController" coverage="0" coveredlines="0" coverablelines="9" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="InputManager" coverage="0" coveredlines="0" coverablelines="14" totallines="44" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
       <Class name="InterstitialAd" coverage="0" coveredlines="0" coverablelines="40" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
-      <Class name="LanguageSelectionDropdownBehaviour" coverage="0" coveredlines="0" coverablelines="1" totallines="8" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="LanguageSelectionDropdown" coverage="0" coveredlines="0" coverablelines="1" totallines="8" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
       <Class name="Localization" coverage="0" coveredlines="0" coverablelines="50" totallines="93" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="11" methodcoverage="0" />
       <Class name="LocalizedText" coverage="0" coveredlines="0" coverablelines="10" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
-      <Class name="MenuUIController" coverage="0" coveredlines="0" coverablelines="10" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="MenuUIController" coverage="3.3" coveredlines="1" coverablelines="30" totallines="70" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="12" methodcoverage="8.3" />
+      <Class name="Modal" coverage="0" coveredlines="0" coverablelines="26" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="ModalConfig" coverage="0" coveredlines="0" coverablelines="5" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="PlayerControls" coverage="0" coveredlines="0" coverablelines="76" totallines="197" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="29" methodcoverage="0" />
       <Class name="RewardedAd" coverage="0" coveredlines="0" coverablelines="61" totallines="101" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
       <Class name="SafeArea" coverage="0" coveredlines="0" coverablelines="15" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
-      <Class name="SaveFile" coverage="100" coveredlines="4" coverablelines="4" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
-      <Class name="Saves" coverage="0" coveredlines="0" coverablelines="13" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
+      <Class name="SaveFile" coverage="100" coveredlines="5" coverablelines="5" totallines="87" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="Saves" coverage="0" coveredlines="0" coverablelines="33" totallines="87" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="9" methodcoverage="0" />
       <Class name="ScenesController" coverage="0" coveredlines="0" coverablelines="25" totallines="56" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="7" methodcoverage="0" />
       <Class name="Singleton[T]" coverage="0" coveredlines="0" coverablelines="2" totallines="8" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
-      <Class name="UIButton" coverage="100" coveredlines="10" coverablelines="10" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="SwipeDetection" coverage="4.7" coveredlines="3" coverablelines="63" totallines="113" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="10" methodcoverage="10" />
+      <Class name="UIButton" coverage="100" coveredlines="8" coverablelines="8" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
       <Class name="UIController" coverage="0" coveredlines="0" coverablelines="2" totallines="14" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="Utils" coverage="0" coveredlines="0" coverablelines="4" totallines="13" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Utils" coverage="0" coveredlines="0" coverablelines="8" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
     </Assembly>
   </Coverage>
 </CoverageReport>
