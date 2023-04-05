@@ -15,6 +15,8 @@
     <text key="menuScene.settingsView.resetProfile.modal.title">Reset profile?</text>
     <text key="menuScene.settingsView.resetProfile.modal.message">This action cannot be undone. All progress will be lost. Continue?</text>
     <text key="menuScene.settingsView.resetProfile.modal.confirmButton">Confirm</text>
+    <!-- Achievements View -->
+    <text key="menuScene.achievementsView.title">Achievements</text>
     <!-- Menu Scene END -->
 
     <!-- Game Scene BEGIN-->
@@ -30,4 +32,17 @@
     <text key="gameScene.gameOverView.finalScoreTemplate">Final score: {0}</text>
     <text key="gameScene.gameOverView.quit">Quit</text>
     <!-- Game Scene END -->
+
+    <!-- Achievements BEGIN-->
+    <text key="achievement_1.name">Achievement 1</text>
+    <text key="achievement_1.description">Achievement 1 description</text>
+    <text key="achievement_2.name">Achievement 2</text>
+    <text key="achievement_2.description">Achievement 2 description</text>
+    <text key="achievement_3.name">Achievement 3</text>
+    <text key="achievement_3.description">Achievement 3 description</text>
+    <text key="achievement_4.name">Achievement 4</text>
+    <text key="achievement_4.description">Achievement 4 description</text>
+    <text key="achievement_5.name">Achievement 5</text>
+    <text key="achievement_5.description">Achievement 5 description</text>
+    <!-- Achievements END -->
 </Language>

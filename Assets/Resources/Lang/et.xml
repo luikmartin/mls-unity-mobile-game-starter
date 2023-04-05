@@ -15,7 +15,8 @@
     <text key="menuScene.settingsView.resetProfile.modal.title">Lähtesta profiil?</text>
     <text key="menuScene.settingsView.resetProfile.modal.message">Antud tegevust ei saa tagasi võtta. Profiili info lähtestatakse. Jätka?</text>
     <text key="menuScene.settingsView.resetProfile.modal.confirmButton">Kinnita</text>
-    <!-- Menu Scene END -->
+    <!-- Achievements View -->
+    <text key="menuScene.achievementsView.title">Saavutused</text>
     <!-- Menu Scene END -->
 
     <!-- Game Scene BEGIN-->
@@ -31,4 +32,17 @@
     <text key="gameScene.gameOverView.finalScoreTemplate">Mängu skoor: {0}</text>
     <text key="gameScene.gameOverView.quit">Menüüsse</text>
     <!-- Game Scene END -->
+
+    <!-- Achievements BEGIN-->
+    <text key="achievement_1.name">Saavutus 1</text>
+    <text key="achievement_1.description">Saavutus 1 kirjeldus</text>
+    <text key="achievement_2.name">Saavutus 2</text>
+    <text key="achievement_2.description">Saavutus 2 kirjeldus</text>
+    <text key="achievement_3.name">Saavutus 3</text>
+    <text key="achievement_3.description">Saavutus 3 kirjeldus</text>
+    <text key="achievement_4.name">Saavutus 4</text>
+    <text key="achievement_4.description">Saavutus 4 kirjeldus</text>
+    <text key="achievement_5.name">Saavutus 5</text>
+    <text key="achievement_5.description">Saavutus 5 kirjeldus</text>
+    <!-- Achievements END -->
 </Language>

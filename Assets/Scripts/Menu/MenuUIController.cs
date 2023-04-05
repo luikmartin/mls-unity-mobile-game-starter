@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuUIController : UIController
 {
@@ -10,11 +11,21 @@ public class MenuUIController : UIController
 
 	[SerializeField]
 	private TextMeshProUGUI _highScoreField;
+	[Space(10)]
+	[SerializeField]
+	private ScrollRect _scrollRect;
+	[SerializeField]
+	private Button _scrollToTopButton;
+	[SerializeField]
+	private float _threshold = 0.9f;
+
 
 	private void Start()
 	{
 		var highScore = Saves.Instance.saveFile.highScore;
 		_highScoreField.text = Localization.Instance.GetText(HIGH_SCORE_TEMPLATE_KEY, highScore);
+
+		_scrollRect.onValueChanged.AddListener(OnScroll);
 	}
 
 	public void OpenGameView() => _scenesController.LoadGameScene();
@@ -23,9 +34,20 @@ public class MenuUIController : UIController
 
 	public void OpenSettingsView() => SetViewActive(Constants.SETTINGS_VIEW);
 
-	public void OpenMenuView() => SetViewActive(Constants.MENU_VIEW);
+	public void OpenMenuView()
+	{
+		_scrollRect.verticalNormalizedPosition = 1;
+		_scrollToTopButton.gameObject.SetActive(false);
 
-	public void OnLanguageValueChange(int value) => Localization.Instance.SetLanguage((Language)value);
+		SetViewActive(Constants.MENU_VIEW);
+	}
+
+	public void OpenAchievementsView() => SetViewActive(Constants.ACHIEVEMENTS_VIEW);
+
+	public void OnLanguageValueChange(int value)
+	{
+		Localization.Instance.SetLanguage((Language)value);
+	}
 
 	public void ResetPlayerProfile()
 	{
@@ -43,4 +65,6 @@ public class MenuUIController : UIController
 
 		Saves.Instance.Create();
 	}
+
+	private void OnScroll(Vector2 position) => _scrollToTopButton.gameObject.SetActive(position.y <= _threshold);
 }

@@ -242,7 +242,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,6 +250,153 @@ TextureImporter:
       bones: []
       spriteID: da498ff153e834a9a97c86d3b2e118b1
       internalID: -1771550987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: achievements_btn
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 69
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8b8c89dc74d47ce8173706b407da88
+      internalID: -632978560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scroll_to_top_btn
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 69
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c047a7be7ab443a98e2372e4c3ce238
+      internalID: -348319925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dropdown_frame
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 97
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 5, z: 5, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d105c2c80066a4aa0b265c40b6366122
+      internalID: 397903482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dropdown_checkmark
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 106
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bc2c099c34f493b9ec41fb3c346382
+      internalID: -99746953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dropdown_arrow
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 100
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb697877692c4f16ab51c2051601564
+      internalID: -1149835140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dropdown_content
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 85
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 4, z: 4, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b824e8e9afb144b5992f9c55a0b1ccb0
+      internalID: -55454782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dropdown
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 116
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e6396cf76734eb3a80f582b03eb19d
+      internalID: 1793128224
       vertices: []
       indices: 
       edges: []
@@ -265,12 +412,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      settings_btn: 685721204
-      modal: -1947326576
-      pause_btn: -1771550987
-      button_1: -2080720363
+      achievements_btn: -632978560
       back_btn: 1937419570
       button_0: -1691593709
+      button_1: -2080720363
+      dropdown: 1793128224
+      dropdown_arrow: -1149835140
+      dropdown_checkmark: -99746953
+      dropdown_content: -55454782
+      dropdown_frame: 397903482
+      modal: -1947326576
+      pause_btn: -1771550987
+      scroll_to_top_btn: -348319925
+      settings_btn: 685721204
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
