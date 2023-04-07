@@ -1,3 +1,4 @@
+using System.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,13 +21,18 @@ public class MenuUIController : UIController
 	private float _threshold = 0.9f;
 
 
+	private void OnEnable() => Saves.SaveFileLoadedEvent += OnSaveLoaded;
+
+	private void OnDisable() => Saves.SaveFileLoadedEvent -= OnSaveLoaded;
+
 	private void Start()
 	{
-		var highScore = Saves.Instance.saveFile.highScore;
-		_highScoreField.text = Localization.Instance.GetText(HIGH_SCORE_TEMPLATE_KEY, highScore);
-
 		_scrollRect.onValueChanged.AddListener(OnScroll);
+
+		UpdateStats();
 	}
+
+	private void OnSaveLoaded() => UpdateStats();
 
 	public void OpenGameView() => _scenesController.LoadGameScene();
 
@@ -59,12 +65,11 @@ public class MenuUIController : UIController
 		});
 	}
 
-	public void ConfirmResetPlayerProfile()
-	{
-		Modal.Instance.Close();
-
-		Saves.Instance.Create();
-	}
-
 	private void OnScroll(Vector2 position) => _scrollToTopButton.gameObject.SetActive(position.y <= _threshold);
+
+	private void UpdateStats()
+	{
+		var highScore = Saves.Instance.saveFile.highScore;
+		_highScoreField.text = Localization.Instance.GetText(HIGH_SCORE_TEMPLATE_KEY, highScore);
+	}
 }

@@ -1,4 +1,4 @@
-﻿public interface IGameUIController : IUIController
+public interface IGameUIController : IUIController
 {
 	void OpenGameOverView(int score);
 	void OpenGameView();

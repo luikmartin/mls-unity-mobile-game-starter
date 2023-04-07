@@ -6,11 +6,19 @@ public class AchievementsManager : Singleton<AchievementsManager>
 	private GameObject _achievementListItemsContainer;
 
 
-	private void OnEnable() => Saves.SaveFileLoadedEvent += OnSaveLoaded;
+	private void OnEnable()
+	{
+		Saves.SaveFileLoadedEvent += UpdateAchievements;
+		Localization.TranslationsChangedEvent += UpdateAchievements;
+	}
 
-	private void OnDisable() => Saves.SaveFileLoadedEvent -= OnSaveLoaded;
+	private void OnDisable()
+	{
+		Saves.SaveFileLoadedEvent -= UpdateAchievements;
+		Localization.TranslationsChangedEvent -= UpdateAchievements;
+	}
 
-	private void OnSaveLoaded()
+	private void UpdateAchievements()
 	{
 		var achievementsData = Saves.Instance.saveFile.achievements;
 

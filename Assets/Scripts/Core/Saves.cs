@@ -16,10 +16,12 @@ public class Saves : Singleton<Saves>
 	public SaveFile saveFile { get; set; }
 
 
-	public override void Awake()
-	{
-		base.Awake();
+	private void OnEnable() => Modal.OnConfirmEvent += Create;
 
+	private void OnDisable() => Modal.OnConfirmEvent -= Create;
+
+	private void Start()
+	{
 		if (PlayerPrefs.HasKey(SAVE_FILE_KEY))
 		{
 			Load();
@@ -30,13 +32,15 @@ public class Saves : Singleton<Saves>
 		}
 	}
 
-	public void Create()
+	private void Create() => Create(true);
+
+	public void Create(bool notify = false)
 	{
 		saveFile = new SaveFile(highScore: 0, achievements: new List<AchievementData>());
 
 		Save(false);
 
-		Load();
+		Load(notify);
 	}
 
 	public void Save(bool notify = true)
