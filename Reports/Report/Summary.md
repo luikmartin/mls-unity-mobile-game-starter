@@ -1,42 +1,46 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 1/20/2023 - 7:56:40 PM |
-| Parser: | MultiReportParser (3x OpenCoverParser) |
-| Assemblies: | 2 |
-| Classes: | 19 |
-| Files: | 18 |
-| Covered lines: | 34 |
-| Uncovered lines: | 363 |
-| Coverable lines: | 397 |
-| Total lines: | 816 |
-| Line coverage: | 8.5% (34 of 397) |
+| Generated on: | 4/5/2023 - 7:07:50 PM |
+| Parser: | MultiReportParser (4x OpenCoverParser) |
+| Assemblies: | 1 |
+| Classes: | 24 |
+| Files: | 21 |
+| Covered lines: | 32 |
+| Uncovered lines: | 578 |
+| Coverable lines: | 610 |
+| Total lines: | 1319 |
+| Line coverage: | 5.2% (32 of 610) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 9 |
-| Total methods: | 97 |
-| Method coverage: | 9.2% (9 of 97) |
+| Covered methods: | 12 |
+| Total methods: | 156 |
+| Method coverage: | 7.6% (12 of 156) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**Editor**|**20**|**0**|**20**|**44**|**100%**|**0**|**0**|****|**6**|**6**|**100%**|
-|UtilsTests|20|0|20|44|100%|0|0||6|6|100%|
-|**Scripts**|**14**|**363**|**377**|**808**|**3.7%**|**0**|**0**|****|**3**|**91**|**3.2%**|
+|**Scripts**|**32**|**578**|**610**|**1588**|**5.2%**|**0**|**0**|****|**12**|**156**|**7.6%**|
+|AchievementData|0|5|5|87|0%|0|0||0|1|0%|
 |AdBase[AD_TYPE,AD_INTERFACE]|0|60|60|121|0%|0|0||0|10|0%|
 |BannerAd|0|27|27|50|0%|0|0||0|3|0%|
-|GameController|0|34|34|63|0%|0|0||0|11|0%|
+|GameController|15|20|35|63|42.8%|0|0||7|13|53.8%|
 |GameUIController|0|9|9|28|0%|0|0||0|6|0%|
+|InputManager|0|14|14|44|0%|0|0||0|7|0%|
 |InterstitialAd|0|40|40|68|0%|0|0||0|3|0%|
-|LanguageSelectionDropdownBehaviour|0|1|1|8|0%|0|0||0|1|0%|
+|LanguageSelectionDropdown|0|1|1|8|0%|0|0||0|1|0%|
 |Localization|0|50|50|93|0%|0|0||0|11|0%|
 |LocalizedText|0|10|10|25|0%|0|0||0|4|0%|
-|MenuUIController|0|10|10|27|0%|0|0||0|7|0%|
+|MenuUIController|1|29|30|70|3.3%|0|0||1|12|8.3%|
+|Modal|0|26|26|95|0%|0|0||0|7|0%|
+|ModalConfig|0|5|5|95|0%|0|0||0|1|0%|
+|PlayerControls|0|76|76|197|0%|0|0||0|29|0%|
 |RewardedAd|0|61|61|101|0%|0|0||0|5|0%|
 |SafeArea|0|15|15|34|0%|0|0||0|4|0%|
-|SaveFile|4|0|4|36|100%|0|0||1|1|100%|
-|Saves|0|13|13|36|0%|0|0||0|7|0%|
+|SaveFile|5|0|5|87|100%|0|0||1|1|100%|
+|Saves|0|33|33|87|0%|0|0||0|9|0%|
 |ScenesController|0|25|25|56|0%|0|0||0|7|0%|
 |Singleton[T]|0|2|2|8|0%|0|0||0|3|0%|
-|UIButton|10|0|10|27|100%|0|0||2|2|100%|
+|SwipeDetection|3|60|63|113|4.7%|0|0||1|10|10%|
+|UIButton|8|0|8|25|100%|0|0||2|2|100%|
 |UIController|0|2|2|14|0%|0|0||0|2|0%|
-|Utils|0|4|4|13|0%|0|0||0|4|0%|
+|Utils|0|8|8|19|0%|0|0||0|5|0%|

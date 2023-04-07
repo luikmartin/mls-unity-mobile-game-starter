@@ -10,6 +10,7 @@ public static class Constants
 	public const string MENU_VIEW = "MenuView";
 	public const string SETTINGS_VIEW = "SettingsView";
 	public const string STATS_VIEW = "StatsView";
+	public const string ACHIEVEMENTS_VIEW = "AchievementsView";
 
 	// Game scene views
 	public const string GAME_VIEW = "GameView";

@@ -55,10 +55,7 @@ public class Localization : Singleton<Localization>
 		return result == null ? "Undefined" : result.value;
 	}
 
-	public string GetText(string key, object args)
-	{
-		return string.Format(GetText(key), args);
-	}
+	public string GetText(string key, object args) => string.Format(GetText(key), args);
 
 	public void SetLanguage(Language value)
 	{

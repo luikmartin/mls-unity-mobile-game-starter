@@ -1,10 +1,11 @@
 using UnityEngine;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 public class UtilsTests
 {
-	private static SaveFile SAVE_FILE_DUMMY_OBJECT = new(highScore: 1);
-	private static string SAVE_FILE_DUMMY_JSON = "{\n    \"highScore\": 1\n}";
+	private static SaveFile SAVE_FILE_DUMMY_OBJECT = new(highScore: 1, achievements: new List<AchievementData>());
+	private static string SAVE_FILE_DUMMY_JSON = "{\n    \"highScore\": 1,\n    \"achievements\": []\n}";
 
 	[SetUp]
 	public void SetUp()

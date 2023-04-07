@@ -1,43 +1,47 @@
 {
   "summary": {
-    "generatedon": "2023-01-20T17:56:40Z",
-    "parser": "MultiReportParser (3x OpenCoverParser)",
-    "assemblies": 2,
-    "classes": 19,
-    "files": 18,
-    "coveredlines": 34,
-    "uncoveredlines": 363,
-    "coverablelines": 397,
-    "totallines": 816,
-    "linecoverage": 8.5,
+    "generatedon": "2023-04-05T16:07:50Z",
+    "parser": "MultiReportParser (4x OpenCoverParser)",
+    "assemblies": 1,
+    "classes": 24,
+    "files": 21,
+    "coveredlines": 32,
+    "uncoveredlines": 578,
+    "coverablelines": 610,
+    "totallines": 1319,
+    "linecoverage": 5.2,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 9,
-    "totalmethods": 97,
-    "methodcoverage": 9.2
+    "coveredmethods": 12,
+    "totalmethods": 156,
+    "methodcoverage": 7.6
  },
   "coverage": {
     "assemblies": [
-      { "name": "Editor", "classes": 1, "coverage": 100, "coveredlines": 20, "coverablelines": 20, "totallines": 44, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6, "classesinassembly": [
-        { "name": "UtilsTests", "coverage": 100, "coveredlines": 20, "coverablelines": 20, "totallines": 44, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 } ] },
-      { "name": "Scripts", "classes": 18, "coverage": 3.7, "coveredlines": 14, "coverablelines": 377, "totallines": 808, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 3.2, "coveredmethods": 3, "totalmethods": 91, "classesinassembly": [
+      { "name": "Scripts", "classes": 24, "coverage": 5.2, "coveredlines": 32, "coverablelines": 610, "totallines": 1588, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 7.6, "coveredmethods": 12, "totalmethods": 156, "classesinassembly": [
+        { "name": "AchievementData", "coverage": 0, "coveredlines": 0, "coverablelines": 5, "totallines": 87, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
         { "name": "AdBase[AD_TYPE,AD_INTERFACE]", "coverage": 0, "coveredlines": 0, "coverablelines": 60, "totallines": 121, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 10 },
         { "name": "BannerAd", "coverage": 0, "coveredlines": 0, "coverablelines": 27, "totallines": 50, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
-        { "name": "GameController", "coverage": 0, "coveredlines": 0, "coverablelines": 34, "totallines": 63, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 11 },
+        { "name": "GameController", "coverage": 42.8, "coveredlines": 15, "coverablelines": 35, "totallines": 63, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 53.8, "coveredmethods": 7, "totalmethods": 13 },
         { "name": "GameUIController", "coverage": 0, "coveredlines": 0, "coverablelines": 9, "totallines": 28, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 },
+        { "name": "InputManager", "coverage": 0, "coveredlines": 0, "coverablelines": 14, "totallines": 44, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
         { "name": "InterstitialAd", "coverage": 0, "coveredlines": 0, "coverablelines": 40, "totallines": 68, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
-        { "name": "LanguageSelectionDropdownBehaviour", "coverage": 0, "coveredlines": 0, "coverablelines": 1, "totallines": 8, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
+        { "name": "LanguageSelectionDropdown", "coverage": 0, "coveredlines": 0, "coverablelines": 1, "totallines": 8, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
         { "name": "Localization", "coverage": 0, "coveredlines": 0, "coverablelines": 50, "totallines": 93, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 11 },
         { "name": "LocalizedText", "coverage": 0, "coveredlines": 0, "coverablelines": 10, "totallines": 25, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
-        { "name": "MenuUIController", "coverage": 0, "coveredlines": 0, "coverablelines": 10, "totallines": 27, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
+        { "name": "MenuUIController", "coverage": 3.3, "coveredlines": 1, "coverablelines": 30, "totallines": 70, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 8.3, "coveredmethods": 1, "totalmethods": 12 },
+        { "name": "Modal", "coverage": 0, "coveredlines": 0, "coverablelines": 26, "totallines": 95, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
+        { "name": "ModalConfig", "coverage": 0, "coveredlines": 0, "coverablelines": 5, "totallines": 95, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 1 },
+        { "name": "PlayerControls", "coverage": 0, "coveredlines": 0, "coverablelines": 76, "totallines": 197, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 29 },
         { "name": "RewardedAd", "coverage": 0, "coveredlines": 0, "coverablelines": 61, "totallines": 101, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
         { "name": "SafeArea", "coverage": 0, "coveredlines": 0, "coverablelines": 15, "totallines": 34, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
-        { "name": "SaveFile", "coverage": 100, "coveredlines": 4, "coverablelines": 4, "totallines": 36, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },
-        { "name": "Saves", "coverage": 0, "coveredlines": 0, "coverablelines": 13, "totallines": 36, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
+        { "name": "SaveFile", "coverage": 100, "coveredlines": 5, "coverablelines": 5, "totallines": 87, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },
+        { "name": "Saves", "coverage": 0, "coveredlines": 0, "coverablelines": 33, "totallines": 87, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 9 },
         { "name": "ScenesController", "coverage": 0, "coveredlines": 0, "coverablelines": 25, "totallines": 56, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
         { "name": "Singleton[T]", "coverage": 0, "coveredlines": 0, "coverablelines": 2, "totallines": 8, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
-        { "name": "UIButton", "coverage": 100, "coveredlines": 10, "coverablelines": 10, "totallines": 27, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 2, "totalmethods": 2 },
+        { "name": "SwipeDetection", "coverage": 4.7, "coveredlines": 3, "coverablelines": 63, "totallines": 113, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 10, "coveredmethods": 1, "totalmethods": 10 },
+        { "name": "UIButton", "coverage": 100, "coveredlines": 8, "coverablelines": 8, "totallines": 25, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 2, "totalmethods": 2 },
         { "name": "UIController", "coverage": 0, "coveredlines": 0, "coverablelines": 2, "totallines": 14, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
-        { "name": "Utils", "coverage": 0, "coveredlines": 0, "coverablelines": 4, "totallines": 13, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 } ] } ]
+        { "name": "Utils", "coverage": 0, "coveredlines": 0, "coverablelines": 8, "totallines": 19, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 } ] } ]
   }
 }
