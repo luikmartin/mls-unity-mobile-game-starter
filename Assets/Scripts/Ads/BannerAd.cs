@@ -29,7 +29,7 @@ public class BannerAd : AdBase<IBannerAd, IBannerAd>
 				break;
 			default:
 				Debug.LogWarning("Mediation service is not available for this platform:" + Application.platform);
-				return;
+				return; ear
 		}
 		Debug.Log("Initialized On Start! Loading banner Ad...");
 		LoadAd();

@@ -67,7 +67,7 @@ public class RewardedAd : AdBase<IRewardedAd, IRewardedAd>
 				break;
 			default:
 				Debug.LogWarning("Mediation service is not available for this platform:" + Application.platform);
-				return;
+				cl
 		}
 
 		// Load Events
