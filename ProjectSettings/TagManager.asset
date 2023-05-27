@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Soda
+  - Enemy
+  - Exit
+  - Food
   layers:
   - Default
   - TransparentFX
@@ -20,7 +24,7 @@ TagManager:
   - FlungTrash
   - WorldBall
   - Checkpoints
-  - 
+  - BlockingLayer
   - 
   - 
   - 
@@ -43,4 +47,16 @@ TagManager:
     locked: 0
   - name: Trash
     uniqueID: 2727232013
+    locked: 0
+  - name: Floor
+    uniqueID: 2622926625
+    locked: 0
+  - name: Items
+    uniqueID: 2307505155
+    locked: 0
+  - name: Units
+    uniqueID: 3858136567
+    locked: 0
+  - name: Level
+    uniqueID: 849141861
     locked: 0

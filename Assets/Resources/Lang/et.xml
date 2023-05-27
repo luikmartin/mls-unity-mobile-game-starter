@@ -30,7 +30,8 @@
     <!-- Game Over View -->
     <text key="gameScene.gameOverView.title">Mäng läbi!</text>
     <text key="gameScene.gameOverView.finalScoreTemplate">Mängu skoor: {0}</text>
-    <text key="gameScene.gameOverView.quit">Menüüsse</text>
+    <text key="gameScene.gameOverView.quit">Tagasi menüüsse</text>
+    <text key="gameScene.gameOverView.restart">Alusta uuesti</text>
     <!-- Game Scene END -->
 
     <!-- Achievements BEGIN-->

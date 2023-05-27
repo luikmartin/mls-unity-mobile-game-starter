@@ -31,6 +31,7 @@
     <text key="gameScene.gameOverView.title">Game over!</text>
     <text key="gameScene.gameOverView.finalScoreTemplate">Final score: {0}</text>
     <text key="gameScene.gameOverView.quit">Quit</text>
+    <text key="gameScene.gameOverView.restart">Restart</text>
     <!-- Game Scene END -->
 
     <!-- Achievements BEGIN-->

@@ -16,7 +16,7 @@ public class UtilsTests
 	[Test]
 	public void GivenEnumString_WhenParsed_ThenValidEnumIsReturned()
 	{
-		var languageEnumEN = Utils.ParseEnum<Language>("EN");
+		var languageEnumEN = Helpers.ParseEnum<Language>("EN");
 
 		Assert.AreEqual(languageEnumEN, Language.EN);
 	}
@@ -24,7 +24,7 @@ public class UtilsTests
 	[Test]
 	public void GivenSaveFileObject_WhenConvertedToJson_ThenValidSaveFileJsonIsReturned()
 	{
-		var saveFileJson = Utils.ToJson(SAVE_FILE_DUMMY_OBJECT);
+		var saveFileJson = Helpers.ToJson(SAVE_FILE_DUMMY_OBJECT);
 
 		Assert.AreEqual(saveFileJson, SAVE_FILE_DUMMY_JSON);
 	}
@@ -32,7 +32,7 @@ public class UtilsTests
 	[Test]
 	public void GivenSaveFileJson_WhenConvertedFromJson_ThenValidSaveFileObjectIsReturned()
 	{
-		var saveFile = Utils.FromJson<SaveFile>(SAVE_FILE_DUMMY_JSON);
+		var saveFile = Helpers.FromJson<SaveFile>(SAVE_FILE_DUMMY_JSON);
 
 		Assert.AreEqual(saveFile.highScore, SAVE_FILE_DUMMY_OBJECT.highScore);
 	}

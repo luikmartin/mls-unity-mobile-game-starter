@@ -52,5 +52,10 @@
     "Temp/": true
   },
   "git.ignoreLimitWarning": true,
-  "cSpell.words": ["Behaviour", "Prefs", "UGUI"]
+  "cSpell.words": [
+    "Behaviour",
+    "Cinemachine",
+    "Prefs",
+    "UGUI"
+  ]
 }
