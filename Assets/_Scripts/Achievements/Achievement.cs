@@ -23,8 +23,8 @@ public class Achievement : MonoBehaviour
 
 	public void Setup(bool isUnlocked)
 	{
-		_name.text = Localization.Instance.GetText(_nameLocalizationKey);
-		_description.text = Localization.Instance.GetText(_descriptionLocalizationKey);
+		_name.text = LocalizationManager.Instance.GetLocalizedValue(_nameLocalizationKey);
+		_description.text = LocalizationManager.Instance.GetLocalizedValue(_descriptionLocalizationKey);
 
 		_canvasGroup.alpha = isUnlocked ? .5f : 1f;
 		_isUnlockedIndicator.SetActive(isUnlocked);

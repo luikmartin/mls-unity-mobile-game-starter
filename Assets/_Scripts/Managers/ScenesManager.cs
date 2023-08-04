@@ -1,51 +1,49 @@
-using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
-public class ScenesManager : MonoBehaviour
+public class ScenesManager : Singleton<ScenesManager>
 {
-	private const string LOAD_VIEW_ANIMATION = "Load";
-	private const string LOAD_ALT_VIEW_ANIMATION = "LoadAlt";
-	private const string LOADED_VIEW_ANIMATION = "Loaded";
+	private const string LOAD_ANIMATION = "Load";
+	private const string LOADED_ANIMATION = "Loaded";
+
+	[SerializeField] private Image _progressBar;
 
 	private Animator _animator;
-
 	private string _nextSceneToLoad;
 
-
-	private void Awake() => _animator = GetComponent<Animator>();
-
-	private void Start()
+	public override void Awake()
 	{
-		Time.timeScale = 1;
-
-		PlayLoadedAnimation();
+		base.Awake();
+		_animator = GetComponent<Animator>();
 	}
 
-	public void LoadGameScene()
+	public void AnimatorHandleNextSceneLoad() => LoadScene(_nextSceneToLoad);
+
+	public void LoadScene(string sceneName)
 	{
-		_nextSceneToLoad = Constants.GAME_SCENE;
-		_animator.Play(LOAD_ALT_VIEW_ANIMATION, -1, 0);
+		_nextSceneToLoad = sceneName;
+		_animator.Play(LOAD_ANIMATION);
 	}
 
-	public void LoadMenuScene()
+	public void HandleLoadScene() => LoadSceneAsync(_nextSceneToLoad);
+
+	public async void LoadSceneAsync(string sceneName)
 	{
-		_nextSceneToLoad = Constants.MENU_SCENE;
-		_animator.Play(LOAD_VIEW_ANIMATION, -1, 0);
-	}
+		var scene = SceneManager.LoadSceneAsync(sceneName);
+		scene.allowSceneActivation = false;
 
-	public void PlayLoadedAnimation() => _animator.Play(LOADED_VIEW_ANIMATION, -1, 0);
-
-	public void AnimatorHandleNextSceneLoad() => StartCoroutine(LoadScene(_nextSceneToLoad));
-
-	private IEnumerator LoadScene(string sceneName)
-	{
-		var asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-
-		while (!asyncLoad.isDone)
+		do
 		{
-			yield return null;
-		}
+			await Task.Delay(100);
+			_progressBar.fillAmount = scene.progress;
+		} while (scene.progress < 0.9f);
+
+		await Task.Delay(100);
+		scene.allowSceneActivation = true;
 	}
+
+	public void PlayLoadedAnimation() => _animator.Play(LOADED_ANIMATION);
 }

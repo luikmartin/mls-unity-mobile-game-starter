@@ -5,13 +5,8 @@ public class SaveManager : Singleton<SaveManager>
 {
 	private static readonly string SAVE_FILE_KEY = "save";
 
-	public delegate void SaveFileSavedDelegate();
-	public static event SaveFileSavedDelegate SaveFileSavedEvent;
-	public static void OnSaveSuccess() => SaveFileSavedEvent?.Invoke();
-
-	public delegate void SaveFileLoadedDelegate();
-	public static event SaveFileLoadedDelegate SaveFileLoadedEvent;
-	public static void OnLoadSuccess() => SaveFileLoadedEvent?.Invoke();
+	public static event System.Action OnLoadSuccess;
+	public static event System.Action OnSaveSuccess;
 
 	public SaveFile saveFile { get; set; }
 
@@ -22,14 +17,8 @@ public class SaveManager : Singleton<SaveManager>
 
 	private void Start()
 	{
-		if (PlayerPrefs.HasKey(SAVE_FILE_KEY))
-		{
-			Load();
-		}
-		else
-		{
-			Create();
-		}
+		if (PlayerPrefs.HasKey(SAVE_FILE_KEY)) Load();
+		else Create();
 	}
 
 	private void Create() => Create(true);
@@ -37,9 +26,7 @@ public class SaveManager : Singleton<SaveManager>
 	public void Create(bool notify = false)
 	{
 		saveFile = new SaveFile(highScore: 0, achievements: new List<AchievementData>());
-
 		Save(false);
-
 		Load(notify);
 	}
 
@@ -47,20 +34,14 @@ public class SaveManager : Singleton<SaveManager>
 	{
 		PlayerPrefs.SetString(SAVE_FILE_KEY, Helpers.ToJson(saveFile));
 
-		if (notify)
-		{
-			OnSaveSuccess();
-		}
+		if (notify) OnSaveSuccess();
 	}
 
 	public void Load(bool notify = true)
 	{
 		saveFile = Helpers.FromJson<SaveFile>(PlayerPrefs.GetString(SAVE_FILE_KEY));
 
-		if (notify)
-		{
-			OnLoadSuccess();
-		}
+		if (notify) OnLoadSuccess();
 	}
 }
 

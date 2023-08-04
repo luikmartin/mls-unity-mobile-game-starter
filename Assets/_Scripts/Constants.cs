@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public static class Constants
 {
 	public const string CONFIG_PATH = "Assets/Config.json";

@@ -1,11 +1,8 @@
 using System;
 using UnityEngine;
 
-/// <summary>
-/// Nice, easy to understand enum-based game manager. For larger and more complex games, look into
-/// state machines. But this will serve just fine for most games.
-/// </summary>
-public class ExampleGameManager : StaticInstance<ExampleGameManager> {
+public class ExampleGameManager : StaticInstance<ExampleGameManager>
+{
     public static event Action<GameState> OnBeforeStateChanged;
     public static event Action<GameState> OnAfterStateChanged;
 
@@ -15,9 +12,11 @@ public class ExampleGameManager : StaticInstance<ExampleGameManager> {
     void Start() => ChangeState(GameState.Starting);
 
     public void ChangeState(GameState newState) {
-        OnBeforeStateChanged?.Invoke(newState);
+        if (State == newState) return;
 
+        OnBeforeStateChanged?.Invoke(newState);
         State = newState;
+
         switch (newState) {
             case GameState.Starting:
                 HandleStarting();
@@ -40,7 +39,6 @@ public class ExampleGameManager : StaticInstance<ExampleGameManager> {
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
-
         OnAfterStateChanged?.Invoke(newState);
         
         Debug.Log($"New state: {newState}");
@@ -75,12 +73,9 @@ public class ExampleGameManager : StaticInstance<ExampleGameManager> {
     }
 }
 
-/// <summary>
-/// This is obviously an example and I have no idea what kind of game you're making.
-/// You can use a similar manager for controlling your menu states or dynamic-cinematics, etc
-/// </summary>
 [Serializable]
-public enum GameState {
+public enum GameState
+{
     Starting = 0,
     SpawningHeroes = 1,
     SpawningEnemies = 2,

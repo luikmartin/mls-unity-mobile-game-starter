@@ -54,7 +54,7 @@ public class GameUIManager : UIManager
 
 	public void OpenGameOverView(int score)
 	{
-		_gameOverScoreText.text = Localization.Instance.GetText(FINAL_SCORE_TEMPLATE_KEY, score);
+		_gameOverScoreText.text = LocalizationManager.Instance.GetLocalizedValue(FINAL_SCORE_TEMPLATE_KEY, score);
 
 		SetViewActive(Constants.GAME_OVER_VIEW);
 	}

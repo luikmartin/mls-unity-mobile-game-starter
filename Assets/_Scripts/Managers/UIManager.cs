@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
 
 	public void SetViewActive(string viewName) => _views.ForEach(view => view.SetActive(view.name.Equals(viewName)));
 
-	public void LoadGameScene() => _scenesManager.LoadGameScene();
+	public void LoadGameScene() => _scenesManager.LoadScene(Constants.GAME_SCENE);
 
-	public void LoadMenuScene() => _scenesManager.LoadMenuScene();
+	public void LoadMenuScene() => _scenesManager.LoadScene(Constants.MENU_SCENE);
 }

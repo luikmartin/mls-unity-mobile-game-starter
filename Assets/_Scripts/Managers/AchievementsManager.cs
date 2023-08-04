@@ -8,14 +8,14 @@ public class AchievementsManager : Singleton<AchievementsManager>
 
 	private void OnEnable()
 	{
-		SaveManager.SaveFileLoadedEvent += UpdateAchievements;
-		Localization.TranslationsChangedEvent += UpdateAchievements;
+		SaveManager.OnLoadSuccess += UpdateAchievements;
+		LocalizationManager.OnLocalizationChange += UpdateAchievements;
 	}
 
 	private void OnDisable()
 	{
-		SaveManager.SaveFileLoadedEvent -= UpdateAchievements;
-		Localization.TranslationsChangedEvent -= UpdateAchievements;
+		SaveManager.OnLoadSuccess -= UpdateAchievements;
+		LocalizationManager.OnLocalizationChange -= UpdateAchievements;
 	}
 
 	private void UpdateAchievements()
@@ -25,7 +25,6 @@ public class AchievementsManager : Singleton<AchievementsManager>
 		foreach (var achievement in _achievementListItemsContainer.GetComponentsInChildren<Achievement>())
 		{
 			var achievementData = achievementsData.Find(a => a.id.Equals(achievement.GetId()));
-
 			achievement.Setup(achievementData != null && achievementData.isUnlocked);
 		}
 	}

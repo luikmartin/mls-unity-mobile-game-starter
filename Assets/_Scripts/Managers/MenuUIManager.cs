@@ -9,20 +9,16 @@ public class MenuUIManager : UIManager
 	private static readonly string RESET_PROFILE_MODAL_MESSAGE_KEY = "menuScene.settingsView.resetProfile.modal.message";
 	private static readonly string RESET_PROFILE_MODAL_CONFIRM_BUTTON_KEY = "menuScene.settingsView.resetProfile.modal.confirmButton";
 
-	[SerializeField]
-	private TextMeshProUGUI _highScoreField;
+	[SerializeField] private TextMeshProUGUI _highScoreField;
 	[Space(10)]
-	[SerializeField]
-	private ScrollRect _scrollRect;
-	[SerializeField]
-	private Button _scrollToTopButton;
-	[SerializeField]
-	private float _threshold = 0.9f;
+	[SerializeField] private ScrollRect _scrollRect;
+	[SerializeField] private Button _scrollToTopButton;
+	[SerializeField] private float _threshold = 0.9f;
 
 
-	private void OnEnable() => SaveManager.SaveFileLoadedEvent += OnSaveLoaded;
+	private void OnEnable() => SaveManager.OnLoadSuccess += OnSaveLoaded;
 
-	private void OnDisable() => SaveManager.SaveFileLoadedEvent -= OnSaveLoaded;
+	private void OnDisable() => SaveManager.OnLoadSuccess -= OnSaveLoaded;
 
 	private void Start() => _scrollRect.onValueChanged.AddListener(OnScroll);
 
@@ -44,18 +40,15 @@ public class MenuUIManager : UIManager
 
 	public void OpenAchievementsView() => SetViewActive(Constants.ACHIEVEMENTS_VIEW);
 
-	public void OnLanguageValueChange(int value)
-	{
-		Localization.Instance.SetLanguage((Language)value);
-	}
+	public void OnLanguageValueChange(int value) => LocalizationManager.Instance.SetLanguage(LocalizationManager.GetLocalizationValue(value));
 
 	public void ResetPlayerProfile()
 	{
 		Modal.Instance.Open(new ModalConfig
 		{
-			title = Localization.Instance.GetText(RESET_PROFILE_MODAL_TITLE_KEY),
-			message = Localization.Instance.GetText(RESET_PROFILE_MODAL_MESSAGE_KEY),
-			confirmButtonLabel = Localization.Instance.GetText(RESET_PROFILE_MODAL_CONFIRM_BUTTON_KEY)
+			title = LocalizationManager.Instance.GetLocalizedValue(RESET_PROFILE_MODAL_TITLE_KEY),
+			message = LocalizationManager.Instance.GetLocalizedValue(RESET_PROFILE_MODAL_MESSAGE_KEY),
+			confirmButtonLabel = LocalizationManager.Instance.GetLocalizedValue(RESET_PROFILE_MODAL_CONFIRM_BUTTON_KEY)
 		});
 	}
 
@@ -64,6 +57,6 @@ public class MenuUIManager : UIManager
 	private void UpdateStats()
 	{
 		var highScore = SaveManager.Instance.saveFile.highScore;
-		_highScoreField.text = Localization.Instance.GetText(HIGH_SCORE_TEMPLATE_KEY, highScore);
+		_highScoreField.text = LocalizationManager.Instance.GetLocalizedValue(HIGH_SCORE_TEMPLATE_KEY, highScore);
 	}
 }

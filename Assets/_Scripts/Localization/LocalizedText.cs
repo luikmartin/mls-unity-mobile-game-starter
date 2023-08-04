@@ -9,17 +9,14 @@ public class LocalizedText : MonoBehaviour
 
 	private void OnEnable()
 	{
-		Localization.TranslationsChangedEvent += LoadTranslation;
+		LocalizationManager.OnLocalizationChange += LoadTranslation;
 
-		if (Localization.Instance != null)
-		{
-			LoadTranslation();
-		}
+		if (LocalizationManager.Instance != null) LoadTranslation();
 	}
 
-	private void OnDisable() => Localization.TranslationsChangedEvent -= LoadTranslation;
+	private void OnDisable() => LocalizationManager.OnLocalizationChange -= LoadTranslation;
 
 	private void Start() => LoadTranslation();
 
-	private void LoadTranslation() => GetComponent<TextMeshProUGUI>().SetText(Localization.Instance.GetText(_key).Replace("\\n", "\n"));
+	private void LoadTranslation() => GetComponent<TextMeshProUGUI>().SetText(LocalizationManager.Instance.GetLocalizedValue(_key).Replace("\\n", "\n"));
 }
